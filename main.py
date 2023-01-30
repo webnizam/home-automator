@@ -3,27 +3,22 @@
 import cv2
 import torch
 from torchvision import models
+from automator_model import AutomatorModel
 from homebridge import HomeBridgeController
 from utils import *
 import time
 from decouple import config
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
-model.fc = torch.nn.Linear(512, 2)
-model.load_state_dict(torch.load('automator.pth', map_location=device))
-model.to(device)
-model.eval()
 
 categories = [
     'close',
     'open',
 ]
 
-# source = 'rtsp://192.168.1.201:8080/h264_ulaw.sdp'
 source = config('CAM_SOURCE')
 
 bridge = HomeBridgeController()
+model = AutomatorModel()
 
 cap = cv2.VideoCapture(source)
 
@@ -43,13 +38,9 @@ while True:
         break
     new_frame_time = time.time()
 
-    preprocessed = preprocess(frame)
-    output = model(preprocessed)
-    output = F.softmax(output, dim=1).detach().cpu().numpy().flatten()
-    category_index = output.argmax()
-    # print(categories[category_index])
+    category_index = model.predict_class(frame)
 
-    if status_count == 5:
+    if status_count == 7:
         On = True if current_status == 1 else False
         bridge.toggle_entrance_light(On=On)
 
@@ -73,7 +64,7 @@ while True:
     cv2.putText(frame, fps, (7, 70), font, 3, (100, 255, 0), 3, cv2.LINE_AA)
     cv2.putText(frame, categories[category_index],
                 (textX, textY), font, 3, (100, 255, 0), 3, cv2.LINE_AA)
-    cv2.imshow('STREAM', frame)
+    cv2.imshow('HOME AUTOMATOR', frame)
     if cv2.waitKey(1) == ord('q'):
         break
 cap.release()

@@ -14,7 +14,7 @@ class HomeBridgeController():
             "otp": ""
         })
         self.token = res.json()['access_token']
-        print(self.token)
+        # print(self.token)
 
     def toggle_entrance_light(self, On=False):
         headers = {
