@@ -80,6 +80,7 @@ while True:
     cv2.putText(frame, fps, (7, 70), font, 3, (100, 255, 0), 3, cv2.LINE_AA)
     cv2.putText(frame, categories[category_index],
                 (textX, textY), font, 3, (100, 255, 0), 3, cv2.LINE_AA)
+    
     cv2.imshow('HOME AUTOMATOR', frame)
     if cv2.waitKey(1) == ord('q'):
         break
