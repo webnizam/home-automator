@@ -1,9 +1,9 @@
 #! /usr/bin/env python
 
 import cv2
-import torch
 from torchvision import models
-from automator_model import AutomatorModel
+from automator_loader import AutomatorModel
+# from detector_loader import ObjectDetectorController
 from homebridge import HomeBridgeController
 from utils import *
 import time
@@ -19,6 +19,7 @@ source = config('CAM_SOURCE')
 
 bridge = HomeBridgeController()
 model = AutomatorModel()
+# detector = ObjectDetectorController()
 
 cap = cv2.VideoCapture(source)
 
@@ -42,13 +43,30 @@ while True:
 
     if status_count == 7:
         On = True if current_status == 1 else False
-        bridge.toggle_entrance_light(On=On)
+        bridge.toggle_entrance_light(On)
 
     if current_status != category_index:
         status_count = 0
 
     current_status = category_index
     status_count += 1
+
+    # detections = detector.get_predictions(frame)
+    
+    # for i in range(0, len(detections["boxes"])):
+    #     confidence = detections["scores"][i]
+    #     if confidence > .5:
+    #         idx = int(detections["labels"][i])
+    #         box = detections["boxes"][i].detach().cpu().numpy()
+    #         (startX, startY, endX, endY) = box.astype("int")
+    #         label = "{:.2f}%".format(confidence * 100)
+    #         print("[INFO] {}".format(label))
+    #         cv2.rectangle(frame, (startX, startY), (endX, endY),
+    #             (255, 255, 0), 2)
+    #         y = startY - 15 if startY - 15 > 15 else startY + 15
+    #         cv2.putText(frame, label, (startX, y),
+    #             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 0), 2)
+
 
     fps = 1/(new_frame_time-prev_frame_time)
     prev_frame_time = new_frame_time

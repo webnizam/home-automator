@@ -2,7 +2,7 @@ import requests
 from decouple import config
 
 
-class HomeBridgeController():
+class HomeBridgeController:
 
     def __init__(self):
         username = config('HB_USER')
@@ -22,7 +22,7 @@ class HomeBridgeController():
         }
         # print(headers)
         res = requests.put(
-            self.base_url+'/accessories/5519af812b4fd0c97cbfd6a47c6637d374a4309669c5ad49a44aeaf39ff709d8',
+            self.base_url+f'/accessories/{config("ENTRANCE_UNIQUE_ID")}',
             json={
                 "characteristicType": "On",
                 "value": 1 if On else 0
