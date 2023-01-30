@@ -8,7 +8,7 @@ from utils import *
 import time
 from decouple import config
 
-device = torch.device('cpu')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
 model.fc = torch.nn.Linear(512, 2)
 model.load_state_dict(torch.load('automator.pth', map_location=device))
