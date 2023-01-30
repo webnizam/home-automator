@@ -1,9 +1,7 @@
 #! /usr/bin/env python
 
 import cv2
-from torchvision import models
 from automator_loader import AutomatorModel
-# from detector_loader import ObjectDetectorController
 from homebridge import HomeBridgeController
 from utils import *
 import time
