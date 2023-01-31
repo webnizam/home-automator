@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=dustynv/ros:foxy-pytorch-l4t-r32.7.1
+ARG BASE_IMAGE=dustynv/ros:foxy-pytorch-l4t-r32.6.1
 FROM ${BASE_IMAGE}
 
 ENV DEBIAN_FRONTEND=noninteractive
