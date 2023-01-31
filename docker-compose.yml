@@ -5,3 +5,10 @@ services:
     build: .
     entrypoint: ./entrypoint.sh
     network_mode: "host"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
