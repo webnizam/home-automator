@@ -8,8 +8,8 @@ from decouple import config
 
 
 categories = [
-    'close',
     'open',
+    'close',
 ]
 
 source = config('CAM_SOURCE')
@@ -20,7 +20,11 @@ model = AutomatorModel()
 
 app = Flask(__name__)
 
-camera = cv2.VideoCapture(source, cv2.CAP_GSTREAMER)
+camera = cv2.VideoCapture(source)
+
+if not camera.isOpened():
+    print("Cannot open camera")
+    exit()
 
 
 def gen_frames():
@@ -28,13 +32,15 @@ def gen_frames():
     prev_frame_time = 0
     new_frame_time = 0
 
+
+
     status_count = 0
     current_status = None
     while True:
         success, frame = camera.read()
         if not success:
             st = time.time()
-            camera = cv2.VideoCapture(source, cv2.CAP_GSTREAMER)
+            # camera = cv2.VideoCapture(source)
             print("tot time lost due to reinitialization : ", time.time()-st)
         else:
             new_frame_time = time.time()
@@ -42,7 +48,7 @@ def gen_frames():
             category_index = model.predict_class(frame)
 
             if status_count == 10:
-                On = True if current_status == 1 else False
+                On = True if current_status == 0 else False
                 bridge.toggle_entrance_light(On)
 
             if current_status != category_index:
