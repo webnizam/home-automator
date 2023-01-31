@@ -12,8 +12,8 @@ categories = [
     'close',
 ]
 
-source = config('CAM_SOURCE')
-# source = 0
+# source = config('CAM_SOURCE')
+source = 0
 
 bridge = HomeBridgeController()
 model = AutomatorModel()
