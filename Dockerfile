@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=nvcr.io/nvidia/l4t-pytorch:r32.6.1-pth1.9-py3
+ARG BASE_IMAGE=nvcr.io/nvidia/dli/dli-nano-ai
 FROM ${BASE_IMAGE}
 
 ENV DEBIAN_FRONTEND=noninteractive
