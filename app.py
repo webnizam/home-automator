@@ -13,17 +13,18 @@ categories = [
 ]
 
 source = config('CAM_SOURCE')
+# source = 0
 
 bridge = HomeBridgeController()
 model = AutomatorModel()
 
 app = Flask(__name__)
 
-camera = cv2.VideoCapture(source)  # use 0 for web camera
+camera = cv2.VideoCapture(source)
 
 
 def gen_frames():
-    
+
     prev_frame_time = 0
     new_frame_time = 0
 
@@ -38,7 +39,7 @@ def gen_frames():
 
             category_index = model.predict_class(frame)
 
-            if status_count == 7:
+            if status_count == 10:
                 On = True if current_status == 1 else False
                 bridge.toggle_entrance_light(On)
 
@@ -67,7 +68,7 @@ def gen_frames():
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
             yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n') 
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 
 @app.route('/video_feed')
@@ -77,9 +78,8 @@ def video_feed():
 
 @app.route('/')
 def index():
-    """Video streaming home page."""
     return render_template('index.html')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=8000, threaded=True)
