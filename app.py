@@ -33,7 +33,9 @@ def gen_frames():
     while True:
         success, frame = camera.read()
         if not success:
-            break
+            st = time.time()
+            camera = cv2.VideoCapture(source)
+            print("tot time lost due to reinitialization : ",time.time()-st)
         else:
             new_frame_time = time.time()
 
