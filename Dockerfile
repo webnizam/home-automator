@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=dustynv/ros:foxy-pytorch-l4t-r32.6.1
+ARG BASE_IMAGE=nvcr.io/nvidia/l4t-pytorch:r32.6.1-pth1.9-py3
 FROM ${BASE_IMAGE}
 
 ENV DEBIAN_FRONTEND=noninteractive
