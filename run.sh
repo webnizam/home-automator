@@ -1,1 +1,1 @@
-sudo docker run --runtime nvidia -it --rm --network host homeautomator/web:latest
+sudo docker run --runtime nvidia --rm --network host homeautomator/web:latest

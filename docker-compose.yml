@@ -4,3 +4,11 @@ services:
     image: homeautomator/web
     build: .
     entrypoint: ./entrypoint.sh
+    network_mode: "host"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
