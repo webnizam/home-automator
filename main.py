@@ -6,7 +6,13 @@ from homebridge import HomeBridgeController
 from utils import *
 import time
 from decouple import config
+import argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument("headless")
+args = parser.parse_args()
+
+print(args.headless)
 
 categories = [
     'close',
