@@ -32,8 +32,6 @@ def gen_frames():
     prev_frame_time = 0
     new_frame_time = 0
 
-
-
     status_count = 0
     current_status = None
     while True:
