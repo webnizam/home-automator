@@ -20,7 +20,7 @@ model = AutomatorModel()
 
 app = Flask(__name__)
 
-camera = cv2.VideoCapture(source)
+camera = cv2.VideoCapture(source, cv2.CAP_GSTREAMER)
 
 
 def gen_frames():
@@ -34,8 +34,8 @@ def gen_frames():
         success, frame = camera.read()
         if not success:
             st = time.time()
-            camera = cv2.VideoCapture(source)
-            print("tot time lost due to reinitialization : ",time.time()-st)
+            camera = cv2.VideoCapture(source, cv2.CAP_GSTREAMER)
+            print("tot time lost due to reinitialization : ", time.time()-st)
         else:
             new_frame_time = time.time()
 
@@ -86,4 +86,3 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000, threaded=True)
-
