@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  app:
+    image: homeautomator/web
+    build: .
+    entrypoint: ./entrypoint.sh

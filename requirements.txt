@@ -1,8 +1,4 @@
 requests
-torch
-torchvision
-pillow
-numpy
-opencv-python
+# opencv-python-headless < 4.5
 python-decouple
 flask
