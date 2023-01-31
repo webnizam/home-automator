@@ -1,8 +1,8 @@
-version: '3.3'
+version: '2.3'
 services:
   app:
     image: homeautomator/web
+    runtime: nvidia
     build: .
     entrypoint: ./entrypoint.sh
     network_mode: "host"
-    runtime: nvidia
