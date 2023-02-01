@@ -46,15 +46,16 @@
 
 ## :dart: About ##
 
-The purpose of this proof of concept project is to demonstrate the capability of controlling lights in a home environment using Jetson Nano and OpenCV with the aid of a trained classification model. The model has been trained to recognize the open and closed states of the entrance door. The lighting control system is integrated with Homebridge, which has already been set up. The application continuously monitors the entrance door and based on its open or closed state, it will toggle the lights accordingly.
+The objective of this proof of concept project is to showcase the feasibility of utilizing Jetson Nano and OpenCV in combination with a trained classification model to control lighting in a residential setting. The classification model has been specifically trained to distinguish between open and closed states of the entrance door. The lighting control system is seamlessly integrated with Homebridge for easy operation. The application constantly monitors the entrance door and adjusts the lighting accordingly.
 
-This project is open source and free to modify to meet individual requirements.
+Please note that the model provided with the repository has been trained for a specific environment and for optimal results, it is recommended to train the model for your specific environment.
+
+This project is open source and available for modification to meet individual requirements and preferences.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Turn on Lights on Opening Door;\
+:heavy_check_mark: Turn off Lights on Closing Door;\
 
 ## :rocket: Technologies ##
 
@@ -81,12 +82,12 @@ $ git clone https://github.com/webnizam/home-automator
 $ cd home-automator
 
 # Build Docker Image
-$ run ./build.sh
+$ run ./build.sh or bash build.sh
 
 # Run the project
-$ run ./run.sh
+$ run ./run.sh or bash run.sh
 
-# The server will initialize in the <http://locahost:8000>
+# The server will initialize in the http://{jetson-ip}:8000
 ```
 
 ## :memo: License ##
