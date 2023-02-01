@@ -81,6 +81,12 @@ $ git clone https://github.com/webnizam/home-automator
 # Access
 $ cd home-automator
 
+# Copy .env
+$ cp .example.env .env
+
+# Edit .env values
+$ nano .env
+
 # Build Docker Image
 $ run ./build.sh or bash build.sh
 
