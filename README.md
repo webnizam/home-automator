@@ -1,9 +1,10 @@
-<div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Home Automator" />
-
-  &#xa0;
-
-  <!-- <a href="https://homeautomator.netlify.app">Demo</a> -->
+<div id="top"></div>
+<div align="center">
+  
+[![Generic badge](https://img.shields.io/badge/NVIDIA-Jetson-brightgreen.svg)](https://shields.io/)
+![](https://img.shields.io/badge/Language-Python-blue)
+[![Generic badge](https://img.shields.io/badge/SHELL-Bash-orange.svg)](https://shields.io/)
+  
 </div>
 
 <h1 align="center">Home Automator</h1>
