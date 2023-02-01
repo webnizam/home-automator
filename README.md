@@ -97,6 +97,16 @@ $ run ./run.sh or bash run.sh
 # The server will initialize in the http://{jetson-ip}:8000
 ```
 
+## Contact
+
+Project Link: [https://github.com/webnizam/home-automator]
+
+Nano Certification URL:
+https://courses.nvidia.com/certificates/84a55e8ae6304f608f1cb463bf6b9784/
+
+Project Video:
+https://drive.google.com/file/d/1MuVffLJt0nN_7qyRL796qWcyVm70C634/view?usp=share_link
+
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
