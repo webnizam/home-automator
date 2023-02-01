@@ -102,10 +102,10 @@ $ run ./run.sh or bash run.sh
 Project Link: https://github.com/webnizam/home-automator
 
 Nano Certification URL:
-https://courses.nvidia.com/certificates/84a55e8ae6304f608f1cb463bf6b9784/
+https://courses.nvidia.com/certificates/84a55e8ae6304f608f1cb463bf6b9784
 
 Project Video:
-https://drive.google.com/file/d/1MuVffLJt0nN_7qyRL796qWcyVm70C634/view?usp=share_link
+https://drive.google.com/file/d/1MuVffLJt0nN_7qyRL796qWcyVm70C634
 
 ## :memo: License ##
 
