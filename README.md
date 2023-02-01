@@ -46,9 +46,9 @@
 
 ## :dart: About ##
 
-This project is developed as a proof of concept to control the lights in my home with the help of Jetson Nano and OpenCV using a Classification model trained for the doors' Open and Close state. To control the lights i used homebridge which is already setup.
+The purpose of this proof of concept project is to demonstrate the capability of controlling lights in a home environment using Jetson Nano and OpenCV with the aid of a trained classification model. The model has been trained to recognize the open and closed states of the entrance door. The lighting control system is integrated with Homebridge, which has already been set up. The application continuously monitors the entrance door and based on its open or closed state, it will toggle the lights accordingly.
 
-Right now the app checks if the entrance door is open or closed then toggle the lights. You may feel free to fork and modify as per your requirements.
+This project is open source and free to modify to meet individual requirements.
 
 ## :sparkles: Features ##
 
