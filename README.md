@@ -38,7 +38,7 @@
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
+  <a href="https://github.com/webnizam/home-automator/blob/main/LICENSE.md">License</a> &#xa0; | &#xa0;
   <a href="https://github.com/webnizam" target="_blank">Author</a>
 </p>
 
