@@ -99,7 +99,7 @@ $ run ./run.sh or bash run.sh
 
 ## Contact
 
-Project Link: [https://github.com/webnizam/home-automator]
+Project Link: https://github.com/webnizam/home-automator
 
 Nano Certification URL:
 https://courses.nvidia.com/certificates/84a55e8ae6304f608f1cb463bf6b9784/
