@@ -55,8 +55,8 @@ This project is open source and available for modification to meet individual re
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Turn on Lights on Opening Door;\
-:heavy_check_mark: Turn off Lights on Closing Door;\
+:heavy_check_mark: Turn on Lights on Opening Door
+:heavy_check_mark: Turn off Lights on Closing Door
 
 ## :rocket: Technologies ##
 
