@@ -97,7 +97,7 @@ $ run ./run.sh or bash run.sh
 # The server will initialize in the http://{jetson-ip}:8000
 ```
 
-## References
+## :earth_americas: References ##
 
 Project Link: https://github.com/webnizam/home-automator
 
