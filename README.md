@@ -60,7 +60,7 @@ This project is open source and available for modification to meet individual re
 
 ## :rocket: Technologies ##
 
-The following tools were used in this project:
+The following tools/technologies were used in this project:
 
 - [PyTorch](https://pytorch.org/)
 - [OpenCV](https://opencv.org/)
