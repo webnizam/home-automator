@@ -99,6 +99,8 @@ $ run ./run.sh or bash run.sh
 
 ## :earth_americas: References ##
 
+:heart: Thanks to <a href="https://github.com/mstatt" target="_blank">Michael Stattelman</a> for the inspiration.
+
 Project Link: https://github.com/webnizam/home-automator
 
 Nano Certification URL:
@@ -107,7 +109,6 @@ https://courses.nvidia.com/certificates/84a55e8ae6304f608f1cb463bf6b9784
 Project Video:
 https://drive.google.com/file/d/1MuVffLJt0nN_7qyRL796qWcyVm70C634
 
-:heart: Thanks to <a href="https://github.com/mstatt" target="_blank">Michael Stattelman</a> for the inspiration.
 
 ## :memo: License ##
 
