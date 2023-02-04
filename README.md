@@ -107,6 +107,8 @@ https://courses.nvidia.com/certificates/84a55e8ae6304f608f1cb463bf6b9784
 Project Video:
 https://drive.google.com/file/d/1MuVffLJt0nN_7qyRL796qWcyVm70C634
 
+:heart: Thanks to <a href="https://github.com/mstatt" target="_blank">Michael Stattelman</a> for the inspiration.
+
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
